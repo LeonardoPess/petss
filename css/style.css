@@ -551,7 +551,6 @@ section.local {
   font-family: Nunito;
   font-size: 16px;
   color: #2d403f;
-
 }
 
 .local-text h1 {
@@ -595,12 +594,13 @@ section.local {
 
 @media (max-width:600px) {
   .local-img {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 
   .local-text {
     width: 100%;
+    padding-left: 0px;
     margin: 30px auto 0 auto;
   }
 }
