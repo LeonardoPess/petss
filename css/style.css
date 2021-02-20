@@ -71,8 +71,12 @@ img {
 }
 
 @media (max-width: 500px) {
-  .pre-header p {
-    font-size: .875em;
+  .pre-header > .container {
+    display: block;
+    text-align: center;
+  }
+  .redes {
+    justify-content: center;
   }
 }
 
@@ -626,7 +630,7 @@ section.local {
 
 @media (max-width: 930px) {
   .prefooter-col1 {
-  width: 100%;
+    width: 100%;
   }
 
   .prefooter-col3 {
