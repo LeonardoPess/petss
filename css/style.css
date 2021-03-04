@@ -89,7 +89,7 @@ header {
   padding: 1.25em 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 999999;
   box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
 }
@@ -175,8 +175,12 @@ header > .container {
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
-.mobile ul {
+.mobile {
   display: none;
+}
+
+.mobile.active {
+  display: block;
   z-index: 99999;
 }
 
@@ -191,6 +195,49 @@ header > .container {
 .desktop a {
   color: white;
   font-size: 1.25em;
+  position: relative;
+  padding: .2rem 0;
+}
+
+.desktop a:hover::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background: rgba(255, 255, 255, .6);
+  animation: borderLink .7s forwards;
+}
+
+.desktop a.active::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background: rgba(255, 255, 255, .6);
+  animation: borderLink .7s forwards;
+}
+
+@keyframes borderLink {
+  from {
+    width: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 @media (max-width:768px) {
@@ -201,17 +248,18 @@ header > .container {
     display: flex;
   }
   .mobile ul {
-    display: none;
+    display: flex;
     position: fixed;
-    padding: 120px 0 60px 0;
+    padding: 120px 0;
     bottom: 0;
     left: 0;
     background: #39bfb7;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 70px);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
   }
   .mobile a {
     color: white;
@@ -226,16 +274,16 @@ header > .container {
 }
 
 .slide {
+  overflow: hidden;
   position: relative;
 }
 
 .slide img {
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .slide img.active {
@@ -372,7 +420,7 @@ section.servico1 {
   margin: 10px auto 0 auto;
   width: 78px;
   height: 4px;
-  background: #99fff9;
+  background: #d0ecea;
 }
 
 .servico-text p {
@@ -393,6 +441,7 @@ section.servico1 {
   overflow: hidden;
   background-image: url("../assets/2cachorros.png");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -448,6 +497,7 @@ section.servico2 {
   overflow: hidden;
   background-image: url("../assets/cachorrosedona.jpg");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -495,6 +545,23 @@ section.review {
 .review-quote {
   max-width: 700px;
   margin: 0 auto;
+  display: none;
+  animation: showDown .7s forwards;
+}
+
+.review-quote.active {
+  display: block;
+}
+
+@keyframes showDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .review p {
@@ -658,6 +725,10 @@ section.local {
 
 .prefooter-col1 span {
   display: inline-block;
+  color: #CC2222;
+}
+
+.prefooter-col1 span.aberto {
   color: #fff;
 }
 
@@ -669,6 +740,19 @@ section.local {
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  border: 1px solid black;
+  background: currentColor;
+}
+
+.prefooter-col1 span.aberto::before {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
   background: #4dfb3e;
 }
 

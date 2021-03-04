@@ -1,6 +1,6 @@
-import smoothScrollTo from './smoothScrollTo.js';
+import ActiveSection from './ActiveSection.js';
 
-export default class SmoothScroll {
+export default class ActiveSection {
   constructor(links) {
     this.links = document.querySelectorAll(links);
 
@@ -22,9 +22,17 @@ export default class SmoothScroll {
     this.scrollToPosition(to);
   }
 
+  isOffsetTop(offset) {
+    if (offset > ) {
+
+    }
+  }
+
   addLinkEvent() {
     this.links.forEach((link) => {
-      link.addEventListener('click', this.scrollToSection)
+      // link.addEventListener('click', this.scrollToSection)
+      const href = link.currentTarget.getAttribute('href');
+      const sectionOffset = this.getScrollTopByHref(href) - 80;
     })
   }
 

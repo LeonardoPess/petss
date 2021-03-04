@@ -11,14 +11,14 @@
 </head>
 <body>
 
-  <div class="pre-header" id="home">
+  <div class="pre-header" id="home" data-section>
     <div class="container">
       <p><b>Celular:</b> (19) 98865-0825</p>
       <div class="redes">
-        <a href=""><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href=""><img src="assets/facebook.png" alt="Facebook"></a>
-        <a href=""><img src="assets/whatsapp.png" alt="Whatsapp"></a>
-        <a href=""><img src="assets/youtube.png" alt="Youtube"></a>
+        <a target="_blank" href="https://www.instagram.com/"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a target="_blank" href="https://www.facebook.com/"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5519988650825"><img src="assets/whatsapp.png" alt="Whatsapp"></a>
+        <a target="_blank" href="https://www.youtube.com/"><img src="assets/youtube.png" alt="Youtube"></a>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
       </div>
       <nav class="desktop">
         <ul>
-          <li><a href="#home">HOME</a></li>
+          <li><a href="#home" class="active">HOME</a></li>
           <li><a href="#sobre">SOBRE</a></li>
           <li><a href="#servicos">SERVIÇOS</a></li>
           <li><a href="#local">LOCAL</a></li>
@@ -41,31 +41,33 @@
           <span>CONTATO</span>
         </div>
       </a>
-      <div class="menuBtn">
+      <div class="menuBtn" data-menu="button">
         <div class="menu-btn-cool"></div>
       </div>
     </div>
   </header>
-  <nav class="mobile">
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#sobre">SOBRE</a></li>
-        <li><a href="#servicos">SERVIÇOS</a></li>
-        <li><a href="#local">LOCAL</a></li>
-      </ul>
-    </nav>
+
+  <nav class="mobile" data-menu="list">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#sobre">SOBRE</a></li>
+      <li><a href="#servicos">SERVIÇOS</a></li>
+      <li><a href="#local">LOCAL</a></li>
+    </ul>
+  </nav>
+
   <section class="slide-wrapper">
     <div class="slide">
-      <img class="active" src="assets/slide1.png" alt="Cachorros">
       <img src="assets/slide1.png" alt="Cachorros">
-      <img src="assets/slide1.png" alt="Cachorros">
-      <img src="assets/slide1.png" alt="Cachorros">
+      <img src="assets/slide2.png" alt="Cachorros">
+      <img src="assets/slide3.png" alt="Cachorros">
+      <img src="assets/slide4.png" alt="Cachorros">
     </div>
-    <img class="slide-arrow l" src="assets/arrow.png" alt="Seta">
-    <img class="slide-arrow r" src="assets/arrow2.png" alt="Seta">
+    <img class="slide-arrow l slide-prev" src="assets/arrow.png" alt="Seta">
+    <img class="slide-arrow r slide-next" src="assets/arrow2.png" alt="Seta">
   </section>
 
-  <section class="about" id="sobre">
+  <section class="about" id="sobre" data-section>
     <div class="container">
       <div class="about-img">
         <img src="assets/pets.jpg" alt="">
@@ -81,7 +83,7 @@
     </div>
   </section>
 
-  <section class="servico1" id="servicos">
+  <section class="servico1" id="servicos" data-section>
     <div class="container">
       <div class="servico-text">
         <img src="assets/pata.svg" alt="Pata">
@@ -121,9 +123,23 @@
     <div class="container">
       <h1>REVIEWS</h1>
       <a href="">Read reviews from some of our clients...</a>
-      <div class="review-quote">
-        <blockquote>❝ It's where I trust to take my dog. Again and again, they have proven to be amazing. Hemlock loves it here! ❞</blockquote>
-      <p>— David G.</p>
+      <div class="slideReviews">
+        <div class="review-quote">
+          <blockquote>❝ It's where I trust to take my dog. Again and again, they have proven to be amazing. Hemlock loves it here! ❞</blockquote>
+          <p>— David G.</p>
+        </div>
+        <div class="review-quote">
+          <blockquote>❝ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum a nam corrupti aut maxime dolore tempora delectus sapiente molestiae earum quidem explicabo dignissimos ipsam deleniti, atque inventore laborum minus provident.! ❞</blockquote>
+          <p>— Ana B.</p>
+        </div>
+        <div class="review-quote">
+          <blockquote>❝ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, eos esse? Quisquam, quod tempore? Quidem necessitatibus velit at possimus quas fugiat est obcaecati ea, iusto maiores ad sunt placeat ullam.! ❞</blockquote>
+          <p>— Carlos Y.</p>
+        </div>
+        <div class="review-quote">
+          <blockquote>❝ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perferendis sequi explicabo itaque illo iusto, quo doloribus! Dolorem animi error unde blanditiis esse impedit magni similique, sit inventore ducimus provident!! ❞</blockquote>
+          <p>— Leo P.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -137,7 +153,7 @@
     </div>
   </section>
 
-  <section class="local" id="local">
+  <section class="local" id="local" data-section>
     <div class="container">
       <div class="local-img">
         <img src="assets/cachorronaJanela.png" alt="Petss">
@@ -147,7 +163,7 @@
         <p>Rua Antonio brega n° 96</p>
         <p>Oliveira Camargo</p>
         <p>Indaiatuba - SP</p>
-        <a href="">
+        <a target="_blank" href="https://www.google.com/maps/@-23.0779513,-47.1996899,19z">
         <p>Ver no mapa</p>
         </a>
         <svg width="14" height="10" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,18 +177,18 @@
     <div class="container">
       <div class="prefooter-col1">
         <h1>Hours</h1>
-        <span>open</span>
-        <p><b>Monday-Friday:</b> 7:30AM - 12:00PM  -  2:00PM - 7:00PM</p>
-        <p><b>Sunday:</b>  9:00AM - 11:00AM  -  4:00PM - 6:00PM</p>
-        <p><b>Saturday:</b>  8:00AM - 12:00PM</p>
+        <span data-semana="1,2,3,4,5" data-horario="8,19">open</span>
+        <p><b>Monday-Friday:</b> 8:00 - 12:00  --  14:00 - 19:00PM</p>
+        <p><b>Sunday:</b>  9:00 - 11:00  --  16:00 - 18:00</p>
+        <p><b>Saturday:</b>  8:00 - 12:00</p>
       </div>
       <div class="prefooter-col3">
         <h1>Social Media</h1>
         <p>Follow us on Facebook, Twitter, Instagram, and YouTube for the latest updates and media!</p>
-        <a href=""><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href=""><img src="assets/facebook.png" alt="Facebook"></a>
-        <a href=""><img src="assets/whatsapp.png" alt="Whatsapp"></a>
-        <a href=""><img src="assets/youtube.png" alt="Youtube"></a>
+        <a target="_blank" href="https://www.instagram.com/"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a target="_blank" href="https://www.facebook.com/"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5519988650825"><img src="assets/whatsapp.png" alt="Whatsapp"></a>
+        <a target="_blank" href="https://www.youtube.com/"><img src="assets/youtube.png" alt="Youtube"></a>
       </div>
     </div>
   </section>
