@@ -25,6 +25,7 @@ export default class Funcionamento {
   ativaAberto() {
     if (this.estaAberto()) {
       this.funcionamento.classList.add(this.activeClass);
+      this.funcionamento.innerHTML = 'open';
     }
   }
 

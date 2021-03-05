@@ -2,6 +2,7 @@ import SmoothScroll from './modules/SmoothScroll.js';
 import Slide from './modules/Slide.js';
 import Funcionamento from './modules/Funcionamento.js';
 import MenuMobile from './modules/MenuMobile.js'
+import UpdateMenu from './modules/UpdateMenu.js';
 
 const smoothScroll = new SmoothScroll('a[href^="#"]');
 smoothScroll.init();
@@ -17,3 +18,6 @@ funcionamento.init();
 
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', 'active');
 menuMobile.init();
+
+const updateMenu = new UpdateMenu('header a[href^="#"]');
+updateMenu.init();
