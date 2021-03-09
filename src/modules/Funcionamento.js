@@ -7,6 +7,9 @@ export default class Funcionamento {
   dadosFuncionamento() {
     this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
     this.horarioSemana = this.funcionamento.dataset.horario.split(',').map(Number);
+    this.break = this.funcionamento.dataset.break.split(',').map(Number);
+    this.weekend = this.funcionamento.dataset.weekend.split(',').map(Number);
+    this.breakWeekend = this.funcionamento.dataset.breakweekend.split(',').map(Number);
   }
 
   dadosAgora() {
@@ -17,8 +20,25 @@ export default class Funcionamento {
 
   estaAberto() {
     const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
-    const horarioAberto = (this.horarioAgora >= this.horarioSemana[0]
-    && this.horarioAgora < this.horarioSemana[1]);
+    if (this.diaAgora === this.diasSemana[6]) {
+      const horarioAberto = (this.horarioAgora >= this.weekend[0]
+      && this.horarioAgora < this.weekend[1]
+      && this.horarioAgora < this.breakWeekend[0]
+      || this.horarioAgora >= this.breakWeekend[1]);
+      return horarioAberto;
+    } else if (this.diaAgora === this.diasSemana[0]) {
+      const horarioAberto = (this.horarioAgora >= this.weekend[0]
+      && this.horarioAgora < this.weekend[1]
+      && this.horarioAgora < this.breakWeekend[0]);
+      return horarioAberto;
+    } else {
+      const horarioAberto = (this.horarioAgora >= this.horarioSemana[0]
+      && this.horarioAgora < this.horarioSemana[1]
+      && this.horarioAgora < this.break[0]
+      || this.horarioAgora >= this.break[1]);
+      return horarioAberto;
+    }
+    console.log(this.diasSemana[0]);
     return semanaAberto && horarioAberto;
   }
 

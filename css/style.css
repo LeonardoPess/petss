@@ -70,9 +70,9 @@ img {
   margin-left: 15px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .pre-header > .container {
-    display: block;
+    flex-direction: column;
     text-align: center;
   }
   .redes {
