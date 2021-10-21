@@ -1,7 +1,7 @@
 # petss
 
 <div style="margin: 0 auto; text-align: center">
-  <img style="width: 100px; height: 100px" src="screenshot.png">
+  <img style="max-width: 100%;" src="screenshot.png">
 </div>
 
  Site feito 100% por mim para treinar e revisar o HTML, CSS e o JavaScript e também para aplicar alguns aprendizados sobre design e coisas do tipo.
