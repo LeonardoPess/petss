@@ -15,9 +15,9 @@
     <img alt="Made by Leonardo Pessoa" src="https://img.shields.io/badge/made%20by-Leonardo%20Pessoa-5965e0">
   </a>
 
-  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/LeonardoPess/Site-Ton?color=rgb(89,101,224)%22">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/LeonardoPess/petss?color=rgb(89,101,224)%22">
 
-  <img alt="Contributors" src="https://img.shields.io/github/contributors/LeonardoPess/Site-Ton?color=rgb(89,101,224)">
+  <img alt="Contributors" src="https://img.shields.io/github/contributors/LeonardoPess/petss?color=rgb(89,101,224)">
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=rgb(89,101,224)">
 </p>
